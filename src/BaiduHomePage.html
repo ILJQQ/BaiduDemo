@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>百度一下,你就知道</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet/Layout.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/webIcon.jpg">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/jquery.range.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/In.css">
+    <!--[if IE]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <style type="text/css">
+        body {
+            behavior: url(StyleSheet/csshover.htc);
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+<!--导航栏悬浮于右侧-->
+<div class="container">
+    <div class="setSkin">
+        <div class="skinNav">
+            <div class="box">
+                <a href="javascript:;" class="hide">&uarr;收起</a>
+                <span class="setDefault">&times;不使用换肤</span>
+                <div class="range">
+                    <input type="range" class="slider-input" value="90"/>
+                </div>
+                <span class="opacitySpan">背景透明度</span>
+            </div>
+        </div>
+        <div class="skinBoard">
+            <div class="selection">
+                <img class="bigImg" src="images/study.jpg">
+                <img class="smallImg" src="images/cloud.jpg">
+                <img class="smallImg" src="images/flower.jpg">
+                <img class="smallImg" src="images/wood.jpg">
+                <img class="smallImg" src="images/rose.jpg">
+                <img class="smallImg" src="images/pad.jpg">
+                <img class="bigImg" src="images/rainbow.jpg">
+                <img class="smallImg" src="images/science.jpg">
+                <img class="smallImg" src="images/orange.jpg">
+                <img class="smallImg lastS" src="images/shine.jpg">
+                <img class="smallImg lastS" src="images/sea.jpg">
+                <img class="smallImg lastS" src="images/frame.jpg">
+            </div>
+            <div class="preview">
+                <div class="detail">
+                    <img class="iconDemo" src="images/plus_logo.png">
+                    <img class="searchDemo" src="images/demo.png">
+                </div>
+            </div>
+            <span class="preIntro">背景皮肤效果预览</span>
+        </div>
+    </div>
+    <header class="head">
+        <div class="leftTable">
+            <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3" width="220"
+                    height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <span class="split">|</span>
+            <a class="chest" href="http://vip.baidu.com/act/xuyuan">宝箱</a>
+            <a class="changeSkin" href="javascript:;">换肤</a>
+            <a class="massage" href="https://www.baidu.com/home/page/show/pagesetting#msg_setting">消息</a>
+        </div>
+        <div class="rightTable">
+            <a id="nuomi" class="bar" target="_self" href="https://www.nuomi.com/?cclass=002540">糯米</a>
+            <a id="news" class="bar" target="_self" href="http://news.baidu.com">新闻</a>
+            <a id="hao123" class="bar" target="_self" href="https://www.hao123.com">hao123</a>
+            <a id="map" class="bar" target="_blank" href="http://map.baidu.com">地图</a>
+            <a id="video" class="bar" target="_self" href="http://v.baidu.com">视频</a>
+            <a id="bar" class="bar" target="_self" href="http://tieba.baidu.com">贴吧</a>
+            <a id="homepage" class="bar" target="_blank" href="i.baidu.com">用户</a>
+            <a id="set" class="bar" href="javascript:">设置</a>
+
+            <ul class="nav">
+                <li class="firCol"><a class="more" href="#">更多产品</a>
+                    <ul>
+                        <li class="fir"><a class="music" href="http://music.baidu.com"></a><span>音乐</span></li>
+                        <li class="fir"><a class="picture" href="http://image.baidu.com/"></a><span>图片</span></li>
+                        <li class="fir"><a class="know" href="https://zhidao.baidu.com/"></a><span>知道</span></li>
+                        <li class="fir"><a class="library" href="http://wenku.baidu.com/"></a><span>文库</span></li>
+                        <li class="rankRow fir"><a class="rank" href="http://top.baidu.com/"></a><span>风云榜</span></li>
+                        <li class="lastRow"><a class="last"
+                                               href="https://www.baidu.com/more/"></a><span>全部产品&#62&#62</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="clear"></div>
+    <div class="main">
+        <img class="icon" src="images/plus_logo.png">
+        <form action="http://www.baidu.com/s" method="get" target="_blank">
+            <div class="In">
+                <input class="scan" name="wd" type="text"/>
+                <span class="microPhone"></span>
+                <span class="sep">|</span>
+                <span class="camera"></span>
+                <button class="submit" type="submit">百度一下</button>
+            </div>
+        </form>
+    </div>
+    <div class="inner">
+        <div class="innerHead">
+            <div class="focus">
+                <span class="userIcon"></span>
+                <span class="myFocus">我的关注</span>
+            </div>
+            <div class="innerSelections">
+                <span class="recommend">推荐</span>
+                <span class="navigation">导航</span>
+                <span class="videoI">视频</span>
+            </div>
+            <div class="setUp"></div>
+        </div>
+    </div>
+    <div class="innerTable">
+        <div class="innerNav">
+            <div class="cont">
+                <span class="interesting">猜你喜欢</span>
+                <div class="innerLink">
+                    <a href="http://www.nuomi.com/?vip_frm=super_nav_vip" title="百度糯米" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=112&amp;product_id=0&amp;disable_goto_flag=0&amp;
+               url=0f9bYyARgjCnh46dUPwkAUHCzuJjA3nL8b%252FmegmCVpcSyQXS%252F8LQHXjeENXBZ9qlgw4&amp;sharekey=&amp;
+               statkey=zw_super_m_112&amp;vip_frm=super_mynav"
+                       data-pos="0"><img src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/9483.png?1"><span
+                            class="nav-txt">百度糯米</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jd.com/?vip_frm=super_nav_vip" title="京东商城" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=101&amp;product_id=0&amp;
+               disable_goto_flag=0&amp;url=65af23ixG1F61hYZkro9MV3kP3w75o5MQ2T69rWH0Nn%252B04v8Hx48%252BidPVLh4oA&amp;
+               sharekey=&amp;statkey=zw_super_m_101&amp;vip_frm=super_mynav" data-pos="1">
+                        <img src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png">
+                        <span class="nav-txt">京东商城</span>
+                    </a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yhd.com/?vip_frm=super_nav_vip" title="1号店" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=102&amp;product_id=0&amp;
+               disable_goto_flag=0&amp;url=d955msVom9oKvgx8dSJZBfHjYFxjgMzubEpwlsSzcHG1E2WXzeUiQt0YQzLGPOQ&amp;
+               sharekey=&amp;statkey=zw_super_m_102&amp;vip_frm=super_mynav" data-pos="2">
+                        <img src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/95780.png">
+                        <span class="nav-txt">1号店</span>
+                    </a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.suning.com/?vip_frm=super_nav_vip" title="苏宁易购" class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=150&amp;product_id=0&amp;disable_goto_flag=0&amp;url=a636UJn50vOtxP8DiKN%252BDqr0U01i%252B1GEkWIFVoCph%252Bi3M%252BydnkEVLG%252BSkUpofSvS3sgq&amp;sharekey=&amp;statkey=zw_super_m_150&amp;vip_frm=super_mynav"
+                       data-pos="3"><img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95537.png?99"><span
+                            class="nav-txt">苏宁易购</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.vip.com/?vip_frm=super_nav_vip" title="唯品会" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=104&amp;product_id=0&amp;disable_goto_flag=0&amp;url=fec4LlsGwvcFWnUGzYiCixeENnzZl2cAyUx8W7P%252Fdt1TAqlzHd04Blo2fCNjnx5B&amp;sharekey=&amp;statkey=zw_super_m_104&amp;vip_frm=super_mynav"
+                       data-pos="4"><img src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95693.png"><span
+                            class="nav-txt">唯品会</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.dangdang.com/?vip_frm=super_nav_vip" title="当当网" class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=105&amp;product_id=0&amp;disable_goto_flag=0&amp;url=3c5cHvUv%252BOdUNSkqnf6eXVsvo3OTMYeKon68djX46cHyhJfQXq90HlJiuSqDURMqJ63GijY&amp;sharekey=&amp;statkey=zw_super_m_105&amp;vip_frm=super_mynav"
+                       data-pos="5"><img src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95517.png"><span
+                            class="nav-txt">当当网</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.sioe.cn/yingyong/yanse-rgb-16/" title="RGB颜色值..." class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="6"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">RGB颜色值...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.cnblogs.com/wuhuacong/p/4757984.html" title="基于Met..." class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="7"><img
+                            src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/7991.png"><span
+                            class="nav-txt">基于Met...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://jquery.com/" title="jquery" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="8"><img
+                            src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/82906.png"><span
+                            class="nav-txt">jquery</span></a>
+                </div>
+                <div class="innerLink"><a href="http://www.cnblogs.com/langtianya/p/3888157.html" title="xcode快捷键"
+                                          class="nav-block" target="_blank" data-click="LOG_LINK" data-fanliurl=""
+                                          data-pos="9"><img
+                        src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/7991.png"><span
+                        class="nav-txt">xcode快捷键</span></a></div>
+                <div class="innerLink">
+                    <a href="http://www.oschina.net/news/52033/free-bootstrap-admin-templates"
+                       title="再来 20 个免费的 Bootstrap 的后台管理模板 - 开源中国社区" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="10"><img
+                            src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/9524.png"><span
+                            class="nav-txt">再来 20...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jq22.com/jquery-info122" title="jquery下载" class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="11"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">jquery下载</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://blog.sina.com.cn/s/blog_4a2061060100b9cu.html" title="java switch语句详解_马乐格彼得_新浪博客"
+                       class="nav-block" target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="12"><img
+                            src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/9898.png"><span
+                            class="nav-txt">java switch</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://blog.sina.com.cn/s/blog_4f9d6b1001000bfo.html"
+                       title="JAVA中int、String的类型转换_神秘小猪_新浪博客"
+                       class="nav-block" target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="13"><img
+                            src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/9898.png"><span
+                            class="nav-txt">JAVA中int</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.atool.org/colorpicker.php" title="在线颜色选择器" class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="14"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">在线颜色...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.semantic-ui.cn/" title="semantic-ui" class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="15"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">semantic-ui</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://idea.lanyus.com/" title="IntelliJ IDEA 注册码" class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="16"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">IntelliJ...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://blog.csdn.net/freshlover/article/details/7610269"
+                       title="CSS3阴影 box-shadow的使用和技巧总结 - freshlover的专栏 - 博客..." class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="17"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/712.png"><span
+                            class="nav-txt">CSS3阴影...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://jingyan.baidu.com/article/c910274bdef023cd371d2d6b.html" title="div+css导航条背景控制"
+                       class="nav-block" target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="18"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/7656.png"><span
+                            class="nav-txt">div+css...</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.w3school.com.cn/tags/att_a_target.asp" title="target" class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="20"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">target</span></a></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.cnblogs.com/lhb25/p/html5-css3-drop-down-menus.html" title="10个css3制作的下拉列表"
+                       class="nav-block" target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="19"><img
+                            src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/7991.png"><span
+                            class="nav-txt">10个css3</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.swiper.com.cn/usage/animate/" title="swiper动画" class="nav-block" target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="21"><img
+                            src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3"><span
+                            class="nav-txt">swiper动画</span></a></span></a>
+                </div>
+                <div class="innerLink"><a href="http://vip.baidu.com/?vip_frm=super_nav_vip" title="百度VIP"
+                                          class="nav-block"
+                                          target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="22"><img
+                        src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/7656.png"><span
+                        class="nav-txt">百度VIP</span></a>
+                </div>
+                <div class="innerLink">
+                    <a href="https://www.microsoft.com/zh-cn/store/apps/windows/" title="微软商店" class="nav-block"
+                       target="_blank"
+                       data-click="LOG_LINK" data-fanliurl="" data-pos="23"><img
+                            src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/9321.png"><span
+                            class="nav-txt">微软商店</span></a>
+                </div>
+            </div>
+
+            <div class="news">
+                <span class="interesting">资讯信息</span>
+                <div class="innerLink">
+                    <a href="http://www.qq.com/" title="腾讯网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="0"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/fcfaaf51f3deb48f7c700dcaf91f3a292df5788d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.sina.com.cn/" title="新浪网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="1"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7aec54e736d12f2e58d3037446c2d562843568d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.weibo.com/" title="微博" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/8644ebf81a4c510f72dd4e0e6959252dd42aa58d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.sohu.com/" title="搜狐网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/3b292df5e0fe992544dac4443da85edf8cb171d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.163.com/" title="网易" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7c1ed21b0ef41bd59e4a44e058da81cb39db3d8c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.gmw.cn/" title="光明网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="5"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/aa18972bd40735faa6e9e2ad97510fb30f24088c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.cntv.cn/" title="央视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="6"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/32fa828ba61ea8d3ecc6d9109e0a304e251f5839.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.people.com.cn/" title="人民网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="7"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/83025aafa40f4bfbaa0133400a4f78f0f63618d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.china.com.cn/" title="中国网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="8"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/86d6277f9e2f07085fe18714e024b899a901f23a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.chinadaily.com.cn/" title="中国日报" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="9"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/c2fdfc039245d688f82a1eb0adc27d1ed21b24fd.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.ifeng.com/" title="凤凰网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="10"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/fc1f4134970a304e31370ceed8c8a786c9175c88.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.xinhuanet.com/" title="新华网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="11"><img height="70" width="115"
+                                                           src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/aa18972bd40735faa6e5e2ad97510fb30f240888.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.zol.com.cn/" title="中关村在线" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="12"><img height="70" width="115"
+                                                           src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/279759ee3d6d55fb21eeda3264224f4a20a4ddfe.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.hupu.com/" title="虎扑体育" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="13"><img height="70" width="115"
+                                                           src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f603918fa0ec08fadf15bfb350ee3d6d55fbda89.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.autohome.com.cn/" title="汽车之家" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="14"><img height="70" width="115"
+                                                           src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/e7cd7b899e510fb34afeda83d033c895d1430c3a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.xueqiu.com/" title="雪球" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="15"><img height="70" width="115"
+                                                           src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/023b5bb5c9ea15ce80fb4c1dbf003af33a87b289.jpg"></a>
+                </div>
+            </div>
+
+            <div class="entertainment">
+                <span class="interesting">娱乐休闲</span>
+                <div class="innerLink">
+                    <a href="http://www.iqiyi.com/" title="爱奇艺" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="0"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f636afc379310a55eb0b72e0be4543a9822610f2.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.youku.com/" title="优酷网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="1"><img height="70" width="115"
+                                                          src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7af40ad162d9f2d3d2c589fba0ec8a136227ccca.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.tudou.com/" title="土豆网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f703738da9773912d4c12875f1198618367ae23b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.4399.com/" title="4399" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/8ad4b31c8701a18bf5f3be5b972f07082838fe8e.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.letv.com/" title="乐视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/562c11dfa9ec8a13eafdfaf4fe03918fa0ecc03b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.letv.com/" title="乐视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/562c11dfa9ec8a13eafdfaf4fe03918fa0ecc03b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.bilibili.com/" title="哔哩哔哩" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="6"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/d1160924ab18972bea15acdeefcd7b899e510af2.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.qidian.com/" title="起点中文网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="7"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4a36acaf2edda3ccaacb143408e93901213f92f3.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.17173.com/" title="17173" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="8"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b3b7d0a20cf431ad1a35ee2d4236acaf2edd983b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yinyuetai.com/" title="音悦台" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="9"><img height="70" width="115"
+                                                          src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b999a9014c086e066083935f0b087bf40ad1cbff.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.duowan.com/" title="多玩游戏" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="10"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f9198618367adab426a1b75782d4b31c8701e4b5.jpg"></a>
+                </div>
+            </div>
+
+            <div class="shop">
+                <span class="interesting">购物海淘</span>
+                <div class="innerLink">
+                    <a href="http://www.womai.com/index-0-0.htm" title="我买网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=110&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6de7mhgQCDTykzf0yAsErBFdQRIBJidssiJlDMl1LdbiGlRXd6SMtPNGp1b9bWHL5Nn3TMKBuCqLc%252FL6AXc6&amp;sharekey=&amp;statkey=zw_super_m_110&amp;vip_frm=super_nav"
+                       data-pos="13"><img height="70" width="115"
+                                          src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/78310a55b319ebc4ed6fda8d8b26cffc1e17168a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.nuomi.com/?cid=xsydh02" title="百度糯米" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=112&amp;product_id=0&amp;disable_goto_flag=0&amp;url=502eCz0g8qJLRF%252B5glxXANMukzphCPjP9RfBrWTno%252F2tLdDxFaeK5laKa50Mddy5nM8&amp;sharekey=&amp;statkey=zw_super_m_112&amp;vip_frm=super_nav"
+                       data-pos="0"><img height="70" width="115"
+                                         src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/0bd162d9f2d3572c970b31c88313632762d0c33d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jd.com/" title="京东" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=101&amp;product_id=0&amp;disable_goto_flag=0&amp;url=3778mubVdcSTtIz2SYb5Kh2mY292O97MA4YQ25S9glBaa7lbNyGQHOsl30t07w&amp;sharekey=&amp;statkey=zw_super_m_101&amp;vip_frm=super_nav"
+                       data-pos="1"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7c1ed21b0ef41bd59e7e44e058da81cb39db3df0.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.taobao.com/" title="淘宝" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b7003af33a87e95089095f7819385343fbf2b48c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://ai.taobao.com?pid=mm_110502715_10024318_42370103" title="爱淘宝" class="nav-block"
+                       target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                                                                src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/faedab64034f78f0a2d837e770310a55b2191cd6.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://chaoshi.tmall.com/activity/hub.htm?t=baiduvip2" title="天猫超市" class="nav-block"
+                       target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                                                                src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/2934349b033b5bb57da68cea3fd3d539b600bcb5.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.vip.com/" title="唯品会" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=104&amp;product_id=0&amp;disable_goto_flag=0&amp;url=a14f%252FoUeSMqr6Z08glAppTfKp2MdpzWSZJW9p9WtUU7bfPpK8ecVLj%252BGnNldeLNm&amp;sharekey=&amp;statkey=zw_super_m_104&amp;vip_frm=super_nav"
+                       data-pos="5"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/1e30e924b899a901372bf72214950a7b0208f58c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.dangdang.com/" title="当当网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=105&amp;product_id=0&amp;disable_goto_flag=0&amp;url=ea8fhrxv2pPi0DQ51r6rA%252Bop49l53tM%252F1tbe1aigiS4AR3oqahb5talLJRmMFlj8Fk5wqtQ&amp;sharekey=&amp;statkey=zw_super_m_105&amp;vip_frm=super_nav"
+                       data-pos="6"><img height="70" width="115"
+                                         src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4610b912c8fcc3ceea2864279b45d688d43f203d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yihaodian.com/" title="一号店" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=102&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6252x90Byvv3a7tSrqEclp969B0I2rTeKRPTLz2cfjAd9GvCA0SPzSSdkwu7MnE&amp;sharekey=&amp;statkey=zw_super_m_102&amp;vip_frm=super_nav"
+                       data-pos="7"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b90e7bec54e736d1f007201c92504fc2d562698a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.suning.com/" title="苏宁易购" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=150&amp;product_id=0&amp;disable_goto_flag=0&amp;url=5a9eGIXk%252BaawxvxLyctJ%252BAIY1Tb49LS2Kb2bjVsedrDZMB%252Fe%252BrkEA%252Bgv0UfiL1JAywgg&amp;sharekey=&amp;statkey=zw_super_m_150&amp;vip_frm=super_nav"
+                       data-pos="8"><img height="70" width="115"
+                                         src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/48540923dd54564e90b0492dbade9c82d0584fc8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.mogujie.com/" title="蘑菇街" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=151&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6fc1BvO30th02VwZzQU7bb1eOnQWl7x%252FHs6nkmxc1vmi0%252F3lgvNQwgC930Q7QzjqkxrCXw&amp;sharekey=&amp;statkey=zw_super_m_151&amp;vip_frm=super_nav"
+                       data-pos="9"><img height="70" width="115"
+                                         src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/caef76094b36acaffa913ae875d98d1001e99cb5.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.gome.com.cn/" title="国美在线" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=103&amp;product_id=0&amp;disable_goto_flag=0&amp;url=2f71EVGtHvHjdMtc%252B7WTnRBO425vW58bzjMJVyEslZT2DVFw9c3zMYEXl2VYvYU%252FdKG1Bw&amp;sharekey=&amp;statkey=zw_super_m_103&amp;vip_frm=super_nav"
+                       data-pos="10"><img height="70" width="115"
+                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/d62a6059252dd42a99daacbf0a3b5bb5c8eab8d7.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jumei.com/" title="聚美优品" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=478&amp;product_id=0&amp;disable_goto_flag=0&amp;url=ce49%252Bj0laNd0qirIvw7k0uuY2GCSUe1NrhN8b1fRs3pNo%252BFTOXs5s3t%252BDCjTAC43TK8&amp;sharekey=&amp;statkey=zw_super_m_478&amp;vip_frm=super_nav"
+                       data-pos="11"><img height="70" width="115"
+                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7aec54e736d12f2e58d6037446c2d562843568d7.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.meilishuo.com/" title="美丽说" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="16"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/faf2b2119313b07e0eaafc1c05d7912397dd8c8b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.lifevc.com/" title="lifeVCROI" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=341&amp;product_id=0&amp;disable_goto_flag=0&amp;url=947efr%252Bqf8JuPHvrO5n6eIkr9iy7sbqLwuLlMtcGwUIuuawcgVXRBSKjm4rH9fl9zsQ&amp;sharekey=&amp;statkey=zw_super_m_341&amp;vip_frm=super_nav"
+                       data-pos="17"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/738b4710b912c8fce4d65ad9f5039245d68821f8.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="innerFocus">
+            <div class="focusNav">
+                <i class="arrow"></i>
+                <span class="focusIntro">我的导航</span>
+                <span class="countFocus"></span>
+            </div>
+            <div class="focusTable">
+                <div class="focusItem" data-nav="10843486" data-url="http://tieba.baidu.com/">
+                    <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl=""
+                       target="_blank">
+                        <div class="nav-del">
+                            <div class="del-icon"></div>
+                        </div>
+                        <img src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/95486.png" alt="百度贴吧" height="16"
+                             width="16" class="nav-icon">
+                        <div class="nav-text"><span class="nav-item-edit"></span><span
+                                class="nav-text-content">百度贴吧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="focusItem" data-url="http://www.taobao.com/"><a
+                        class="border-for-item" title="淘宝网" href="http://www.taobao.com/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95487.png" alt="淘宝网" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">淘宝网</span>
+                    </div>
+                </a></div>
+                <div class="focusItem" data-nav="904305" data-url="http://weibo.com/"><a
+                        class="border-for-item" title="新浪微博" href="http://weibo.com/" data-fanliurl="" target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/95488.png" alt="新浪微博" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">新浪微博</span>
+                    </div>
+                </a></div>
+                <div class="focusItem" data-nav="6969151" data-url="http://www.amazon.cn/"><a
+                        class="border-for-item" title="亚马逊" href="http://www.amazon.cn/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95493.png" alt="亚马逊" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">亚马逊</span>
+                    </div>
+                </a></div>
+                <div class="focusItem" data-nav="10801713" data-url="http://www.hao123.com/"><a
+                        class="border-for-item" title="hao123" href="http://www.hao123.com/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/95490.png" alt="hao123" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span
+                            class="nav-text-content">hao123</span></div>
+                </a></div>
+                <div class="focusItem" data-nav="3567131" data-url="http://www.360buy.com/"><a
+                        class="border-for-item fanli-item-border" title="京东商城" href="http://www.360buy.com/"
+                        data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=101&amp;product_id=0&amp;disable_goto_flag=0&amp;url=65af23ixG1F61hYZkro9MV3kP3w75o5MQ2T69rWH0Nn%252B04v8Hx48%252BidPVLh4oA&amp;sharekey=&amp;statkey=zw_super_m_101&amp;vip_frm=super_mynav"
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/95475.png" alt="京东商城" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span
+                            class="nav-text-content">京东商城</span><span class="s-fanli-tag"
+                                                                      data-fanlimall="http://vip.baidu.com/m_101?vip_frm=super_mynav_mall"
+                                                                      title="最高返利80.00%"> </span></div>
+                </a></div>
+                <div class="focusItem" data-nav="5915062" data-url="http://www.youku.com/"><a
+                        class="border-for-item" title="优酷网" href="http://www.youku.com/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95489.png" alt="优酷网" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">优酷网</span>
+                    </div>
+                </a></div>
+                <div class="focusItem" data-nav="6304961" data-url="http://www.7k7k.com/"><a
+                        class="border-for-item" title="7k7k小游戏" href="http://www.7k7k.com/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/95507.png" alt="7k7k小游戏" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span
+                            class="nav-text-content">7k7k小游戏</span></div>
+                </a></div>
+                <div class="focusItem" data-nav="10973234" data-url="http://www.renren.com/"><a
+                        class="border-for-item" title="人人网" href="http://www.renren.com/" data-fanliurl=""
+                        target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95495.png" alt="人人网" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">人人网</span>
+                    </div>
+                </a></div>
+                <div class="focusItem" data-nav="13115552"
+                     data-url="http://lol.178.com/list/142589587871.html"><a class="border-for-item" title="lol小智"
+                                                                             href="http://lol.178.com/list/142589587871.html"
+                                                                             data-fanliurl="" target="_blank">
+                    <div class="nav-del">
+                        <div class="del-icon"></div>
+                    </div>
+                    <img src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/7192.png" alt="lol小智" height="16"
+                         width="16" class="nav-icon">
+                    <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">lol小智</span>
+                    </div>
+                </a></div>
+            </div>
+            <div class="shop">
+                <span class="interesting">购物海淘</span>
+                <div class="innerLink">
+                    <a href="http://www.womai.com/index-0-0.htm" title="我买网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=110&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6de7mhgQCDTykzf0yAsErBFdQRIBJidssiJlDMl1LdbiGlRXd6SMtPNGp1b9bWHL5Nn3TMKBuCqLc%252FL6AXc6&amp;sharekey=&amp;statkey=zw_super_m_110&amp;vip_frm=super_nav"
+                       data-pos="13"><img height="70" width="115"
+                                          src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/78310a55b319ebc4ed6fda8d8b26cffc1e17168a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.nuomi.com/?cid=xsydh02" title="百度糯米" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=112&amp;product_id=0&amp;disable_goto_flag=0&amp;url=502eCz0g8qJLRF%252B5glxXANMukzphCPjP9RfBrWTno%252F2tLdDxFaeK5laKa50Mddy5nM8&amp;sharekey=&amp;statkey=zw_super_m_112&amp;vip_frm=super_nav"
+                       data-pos="0"><img height="70" width="115"
+                                         src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/0bd162d9f2d3572c970b31c88313632762d0c33d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jd.com/" title="京东" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=101&amp;product_id=0&amp;disable_goto_flag=0&amp;url=3778mubVdcSTtIz2SYb5Kh2mY292O97MA4YQ25S9glBaa7lbNyGQHOsl30t07w&amp;sharekey=&amp;statkey=zw_super_m_101&amp;vip_frm=super_nav"
+                       data-pos="1"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7c1ed21b0ef41bd59e7e44e058da81cb39db3df0.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.taobao.com/" title="淘宝" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b7003af33a87e95089095f7819385343fbf2b48c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://ai.taobao.com?pid=mm_110502715_10024318_42370103" title="爱淘宝" class="nav-block"
+                       target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                                                                src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/faedab64034f78f0a2d837e770310a55b2191cd6.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://chaoshi.tmall.com/activity/hub.htm?t=baiduvip2" title="天猫超市" class="nav-block"
+                       target="_blank" data-click="LOG_LINK" data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                                                                src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/2934349b033b5bb57da68cea3fd3d539b600bcb5.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.vip.com/" title="唯品会" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=104&amp;product_id=0&amp;disable_goto_flag=0&amp;url=a14f%252FoUeSMqr6Z08glAppTfKp2MdpzWSZJW9p9WtUU7bfPpK8ecVLj%252BGnNldeLNm&amp;sharekey=&amp;statkey=zw_super_m_104&amp;vip_frm=super_nav"
+                       data-pos="5"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/1e30e924b899a901372bf72214950a7b0208f58c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.dangdang.com/" title="当当网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=105&amp;product_id=0&amp;disable_goto_flag=0&amp;url=ea8fhrxv2pPi0DQ51r6rA%252Bop49l53tM%252F1tbe1aigiS4AR3oqahb5talLJRmMFlj8Fk5wqtQ&amp;sharekey=&amp;statkey=zw_super_m_105&amp;vip_frm=super_nav"
+                       data-pos="6"><img height="70" width="115"
+                                         src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4610b912c8fcc3ceea2864279b45d688d43f203d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yihaodian.com/" title="一号店" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=102&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6252x90Byvv3a7tSrqEclp969B0I2rTeKRPTLz2cfjAd9GvCA0SPzSSdkwu7MnE&amp;sharekey=&amp;statkey=zw_super_m_102&amp;vip_frm=super_nav"
+                       data-pos="7"><img height="70" width="115"
+                                         src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b90e7bec54e736d1f007201c92504fc2d562698a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.suning.com/" title="苏宁易购" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=150&amp;product_id=0&amp;disable_goto_flag=0&amp;url=5a9eGIXk%252BaawxvxLyctJ%252BAIY1Tb49LS2Kb2bjVsedrDZMB%252Fe%252BrkEA%252Bgv0UfiL1JAywgg&amp;sharekey=&amp;statkey=zw_super_m_150&amp;vip_frm=super_nav"
+                       data-pos="8"><img height="70" width="115"
+                                         src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/48540923dd54564e90b0492dbade9c82d0584fc8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.mogujie.com/" title="蘑菇街" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=151&amp;product_id=0&amp;disable_goto_flag=0&amp;url=6fc1BvO30th02VwZzQU7bb1eOnQWl7x%252FHs6nkmxc1vmi0%252F3lgvNQwgC930Q7QzjqkxrCXw&amp;sharekey=&amp;statkey=zw_super_m_151&amp;vip_frm=super_nav"
+                       data-pos="9"><img height="70" width="115"
+                                         src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/caef76094b36acaffa913ae875d98d1001e99cb5.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.gome.com.cn/" title="国美在线" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=103&amp;product_id=0&amp;disable_goto_flag=0&amp;url=2f71EVGtHvHjdMtc%252B7WTnRBO425vW58bzjMJVyEslZT2DVFw9c3zMYEXl2VYvYU%252FdKG1Bw&amp;sharekey=&amp;statkey=zw_super_m_103&amp;vip_frm=super_nav"
+                       data-pos="10"><img height="70" width="115"
+                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/d62a6059252dd42a99daacbf0a3b5bb5c8eab8d7.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.jumei.com/" title="聚美优品" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=478&amp;product_id=0&amp;disable_goto_flag=0&amp;url=ce49%252Bj0laNd0qirIvw7k0uuY2GCSUe1NrhN8b1fRs3pNo%252BFTOXs5s3t%252BDCjTAC43TK8&amp;sharekey=&amp;statkey=zw_super_m_478&amp;vip_frm=super_nav"
+                       data-pos="11"><img height="70" width="115"
+                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7aec54e736d12f2e58d6037446c2d562843568d7.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yohobuy.com/" title="有货网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=186&amp;product_id=0&amp;disable_goto_flag=0&amp;url=d3957QwcRTLtiEaCJVF4MncrXA8WaRdgemqq4%252B7J%252BYi%252Fw63CY96TVhF4gt5WKJJaeTyC&amp;sharekey=&amp;statkey=zw_super_m_186&amp;vip_frm=super_nav"
+                       data-pos="12"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4bed2e738bd4b31cf71638af8ed6277f9e2ff8f8.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.meilishuo.com/" title="美丽说" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="16"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/faf2b2119313b07e0eaafc1c05d7912397dd8c8b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.lifevc.com/" title="lifeVCROI" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=341&amp;product_id=0&amp;disable_goto_flag=0&amp;url=947efr%252Bqf8JuPHvrO5n6eIkr9iy7sbqLwuLlMtcGwUIuuawcgVXRBSKjm4rH9fl9zsQ&amp;sharekey=&amp;statkey=zw_super_m_341&amp;vip_frm=super_nav"
+                       data-pos="17"><img height="70" width="115"
+                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/738b4710b912c8fce4d65ad9f5039245d68821f8.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="innerRec">
+            <div class="news">
+                <span class="interesting">资讯信息</span>
+                <div class="innerLink">
+                    <a href="http://www.qq.com/" title="腾讯网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="0"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/fcfaaf51f3deb48f7c700dcaf91f3a292df5788d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.sina.com.cn/" title="新浪网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="1"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7aec54e736d12f2e58d3037446c2d562843568d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.weibo.com/" title="微博" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/8644ebf81a4c510f72dd4e0e6959252dd42aa58d.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.sohu.com/" title="搜狐网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/3b292df5e0fe992544dac4443da85edf8cb171d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.163.com/" title="网易" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7c1ed21b0ef41bd59e4a44e058da81cb39db3d8c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.gmw.cn/" title="光明网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="5"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/aa18972bd40735faa6e9e2ad97510fb30f24088c.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.cntv.cn/" title="央视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="6"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/32fa828ba61ea8d3ecc6d9109e0a304e251f5839.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.people.com.cn/" title="人民网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="7"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/83025aafa40f4bfbaa0133400a4f78f0f63618d4.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.china.com.cn/" title="中国网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="8"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/86d6277f9e2f07085fe18714e024b899a901f23a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.chinadaily.com.cn/" title="中国日报" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="9"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/c2fdfc039245d688f82a1eb0adc27d1ed21b24fd.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.ifeng.com/" title="凤凰网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="10"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/fc1f4134970a304e31370ceed8c8a786c9175c88.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.xinhuanet.com/" title="新华网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="11"><img height="70" width="115"
+                                                           src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/aa18972bd40735faa6e5e2ad97510fb30f240888.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.zol.com.cn/" title="中关村在线" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="12"><img height="70" width="115"
+                                                           src="https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/279759ee3d6d55fb21eeda3264224f4a20a4ddfe.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.hupu.com/" title="虎扑体育" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="13"><img height="70" width="115"
+                                                           src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f603918fa0ec08fadf15bfb350ee3d6d55fbda89.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.autohome.com.cn/" title="汽车之家" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="14"><img height="70" width="115"
+                                                           src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/e7cd7b899e510fb34afeda83d033c895d1430c3a.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.xueqiu.com/" title="雪球" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="15"><img height="70" width="115"
+                                                           src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/023b5bb5c9ea15ce80fb4c1dbf003af33a87b289.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="innerVideo">
+            <div class="entertainment">
+                <span class="interesting">娱乐休闲</span>
+                <div class="innerLink">
+                    <a href="http://www.iqiyi.com/" title="爱奇艺" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="0"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f636afc379310a55eb0b72e0be4543a9822610f2.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.youku.com/" title="优酷网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="1"><img height="70" width="115"
+                                                          src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/7af40ad162d9f2d3d2c589fba0ec8a136227ccca.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.tudou.com/" title="土豆网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="2"><img height="70" width="115"
+                                                          src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f703738da9773912d4c12875f1198618367ae23b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.4399.com/" title="4399" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="3"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/8ad4b31c8701a18bf5f3be5b972f07082838fe8e.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.letv.com/" title="乐视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/562c11dfa9ec8a13eafdfaf4fe03918fa0ecc03b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.letv.com/" title="乐视网" class="nav-block" target="_blank" data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="4"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/562c11dfa9ec8a13eafdfaf4fe03918fa0ecc03b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.bilibili.com/" title="哔哩哔哩" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="6"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/d1160924ab18972bea15acdeefcd7b899e510af2.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.qidian.com/" title="起点中文网" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="7"><img height="70" width="115"
+                                                          src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/4a36acaf2edda3ccaacb143408e93901213f92f3.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.17173.com/" title="17173" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="8"><img height="70" width="115"
+                                                          src="https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b3b7d0a20cf431ad1a35ee2d4236acaf2edd983b.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.yinyuetai.com/" title="音悦台" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="9"><img height="70" width="115"
+                                                          src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/pic/item/b999a9014c086e066083935f0b087bf40ad1cbff.jpg"></a>
+                </div>
+                <div class="innerLink">
+                    <a href="http://www.duowan.com/" title="多玩游戏" class="nav-block" target="_blank"
+                       data-click="LOG_LINK"
+                       data-fanliurl="" data-pos="10"><img height="70" width="115"
+                                                           src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/pic/item/f9198618367adab426a1b75782d4b31c8701e4b5.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="goTop">
+        <div class="topPic"></div>
+        <span class="topTit">回到顶部</span>
+    </div>
+    <footer>
+        <div class="qrCode">
+            <img src="images/baidu.png" class="qr1">
+            <span class="sjBaidu"> 手机百度</span>
+            <span class="faster">快人一步</span>
+            <img src="images/nuomi.png" class="qr2">
+            <span class="bdNuomi">百度糯米</span>
+            <span class="cheap">一元大餐</span>
+        </div>
+        <div class=about>
+            <a class="setHomeP" href="https://www.baidu.com/cache/sethelp/help.html">把百度设为首页</a>
+            &nbsp;
+            <a class="abB" href="http://home.baidu.com/">关于百度</a>
+            &nbsp;
+            <a class="baidu" href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome">About Baidu</a>
+            &nbsp;
+            <a class="adv" href="http://e.baidu.com/?refer=888">百度推广</a>
+            <p class="rights">Copyright@ILJQQ 该网站为百度首页练习Demo</p>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <div>
+            <p class="lh">
+                <a class="sethome" href="//www.baidu.com/cache/sethelp/index.html" target="_blank"> 设为首页 </a>
+            </p>
+            <span class="copyright-text"><span>©2016&nbsp;Baidu&nbsp;</span>
+                <a href="//www.baidu.com/duty/" target="_blank">使用百度前必读</a>
+                &nbsp;<a href="http://jianyi.baidu.com" target="_blank">意见反馈</a>
+                &nbsp;<span>京ICP证030173号&nbsp;</span><img width="13" height="16"
+                src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/copy_rignt_24.png">
+            </span>
+        </div>
+        <div class="recordcode">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001"
+               target="_blank"><i></i>京公网安备11000002000001号</a>
+        </div>
+    </div>
+</div>
+<div class="phone">
+    <div class="top">
+        <div class="navP">
+            <div class="window">
+                <iframe src="http://m.baidu.com" width="350" height="35"
+                        marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="rightNav">
+                <a class="watch" href="https://www.baidu.com/home/operation/show/dogmain?frm=wsiedenglu">送苹果手表</a>
+                <i></i>
+                <a class="user-phone" href="https://wappass.baidu.com/passport/?login&tpl=wimn&ssid%3D0%26amp%3Bfrom%3D
+            %26amp%3Buid%3D%26amp%3Bpu%3Dsz%2540224_220%252Cta%2540iphone___3_602%26amp%3Bbd_page_type%3D1&tn=&
+            regtype=1&u=https%3A%2F%2Fm.baidu.com"></a>
+                <a class="skin-phone" href="https://m.baidu.com/#iview=skin"></a>
+            </div>
+        </div>
+        <div class="main-phone">
+            <img class="baidu-phone" src="images/plus_logo.png">
+            <form action="http://m.baidu.com/s" method="get" target="_blank">
+                <div class="In">
+                    <input class="scan" name="wd" type="text"/>
+                    <button class="submit" type="submit">百度一下</button>
+                </div>
+            </form>
+            <div class="nav-row">
+                <div class="focus">
+                    <a href="https://m.baidu.com/#iact=wiseindex%2Ftabs%2Fmine%2Factivity%2Fmidmine%3D%257B%2522
+                    linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A0%
+                    252C%2522index%2522%253A0%252C%2522url%2522%253A%2522%2522%252C%2522title%2522%253A%2522%25E5%2585
+                    %25B3%25E6%25B3%25A8%2522%257D%257D"></a>
+                    <i class="botWord">关注</i>
+                </div>
+                <div class="newsP">
+                    <a href="http://m.news.baidu.com/news?fr=mohome&ssid=0&from=&uid=&pu=sz%401320_2001%2Cta%40
+                    iphone_1_8.0_3_600&bd_page_type=1"></a>
+                    <i class="botWord">新闻</i>
+                </div>
+                <div class="novel">
+                    <a href="http://dushu.m.baidu.com/"></a>
+                    <i class="botWord">小说</i>
+                </div>
+                <div class="videoP">
+                    <a href="http://video.m.baidu.com/?from=wise_nav#/?_k=ntfx27"></a>
+                    <i class="botWord">视频</i>
+                </div>
+                <div class="nuomiP">
+                    <a href="https://m.nuomi.com/?cid=wise_shouye_nuomi"></a>
+                    <i class="botWord">糯米</i>
+                </div>
+                <div class="mapP">
+                    <a href="http://map.baidu.com/mobile/webapp/index/index/?itj=45&wtj=wi&ssid=0&from=&uid=&pu=sz
+                    %401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1&showcvr=1"></a>
+                    <i class="botWord">地图</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <a class="worldRank" href="http://mt.sohu.com/20160730/n461797340.shtml">
+            <p>世界上最贫穷的黄金之国,穷的只剩下黄金了</p>
+            <img src="images/gold1.jpg">
+            <img src="images/gold2.jpg">
+            <img src="images/gold3.jpg">
+        </a>
+        <a class="gameSport" href="http://m.jiangsu.china.com.cn/mobile/2016/kuaixun_1108/7977557.html">
+            <p>首个电竞专业考试,三成不及格</p>
+            <img src="images/gamesport.jpeg">
+        </a>
+        <a class="food" href="https://m.baidu.com/?action=newsdetail&nid=15562064581639667590&n_type=0">
+            <p>5种恢复免疫力的食物，你知道吗？</p>
+            <img src="images/food1.jpeg">
+            <img src="images/food2.jpeg">
+            <img src="images/food3.jpeg">
+        </a>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../build/scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../build/scripts/custom.min.js"></script>
+</html>
